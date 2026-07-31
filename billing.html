@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing | SubFlow</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/billing.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>SubFlow</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="portal.html">Portal</a>
+        <a href="billing.html">Billing</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+
+</header>
+
+<section class="billing">
+
+    <h1>Billing & Invoice</h1>
+
+    <div class="invoice-card">
+
+        <h2>Invoice Details</h2>
+
+        <p><strong>Subscription Plan :</strong> <span id="invoicePlan">-</span></p>
+
+        <p><strong>Amount :</strong> ₹<span id="invoiceAmount">0</span></p>
+
+        <p><strong>Status :</strong> <span id="paymentStatus">Pending</span></p>
+
+        <button id="payBtn">Generate Invoice</button>
+
+    </div>
+
+</section>
+
+<script src="js/billing.js"></script>
+
+</body>
+</html>
