@@ -28,3 +28,37 @@ async function loadSubscription() {
 }
 
 loadSubscription();
+
+document.getElementById("upgradeBtn").addEventListener("click", async () => {
+
+    await fetch("http://localhost:5000/api/subscription/upgrade", {
+        method: "PUT"
+    });
+
+    loadSubscription();
+
+});
+
+document.getElementById("downgradeBtn").addEventListener("click", async () => {
+
+    await fetch("http://localhost:5000/api/subscription/downgrade", {
+        method: "PUT"
+    });
+
+    loadSubscription();
+
+});
+
+document.getElementById("cancelBtn").addEventListener("click", async () => {
+
+    const confirmCancel = confirm("Are you sure you want to cancel your subscription?");
+
+    if (!confirmCancel) return;
+
+    await fetch("http://localhost:5000/api/subscription/cancel", {
+        method: "PUT"
+    });
+
+    loadSubscription();
+
+});
