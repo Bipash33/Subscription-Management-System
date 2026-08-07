@@ -17,16 +17,16 @@ app.use(cors());
 app.use(express.json());
 
 // Serve frontend files
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // API Routes
 app.use("/api/plans", planRoutes);
 app.use("/api/subscription", subscriptionRoutes);
 app.use("/api/auth", authRoutes);
 
-// Homepage
+// Open website
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "index.html"));
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 const PORT = process.env.PORT || 5000;
